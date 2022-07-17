@@ -1,5 +1,6 @@
 # Markdown Tutorial
 
+[TOC]
 
 ## 常用命令
 
@@ -17,26 +18,35 @@
 
 ## 文本格式
 
-|   功能   |   Typora命令   |    Markdown语法     |
-| :------: | :------------: | :-----------------: |
-|   加粗   |     Ctrl+B     |     `**text**`      |
-|   倾斜   |     Ctrl+I     |      `*text*`       |
-|  下划线  |     Ctrl+U     |    `<u>text</u>`    |
-|   组合   |   Ctrl+B+I+U   | `**<u>*text*</u>**` |
-|   上标   |                |      `^text^`       |
-|   下标   |                |      `~text~`       |
-|   高亮   |                |     `==text==`      |
-| 取消格式 | 重复快捷键命令 |                     |
+|            功能            | Typora命令 |                    Markdown语法                    |
+| :------------------------: | :--------: | :------------------------------------------------: |
+|            加粗            |   Ctrl+B   |                     `**text**`                     |
+|            倾斜            |   Ctrl+I   |                      `*text*`                      |
+|           下划线           |   Ctrl+U   |                   `<u>text</u>`                    |
+|            组合            | Ctrl+B+I+U |                `**<u>*text*</u>**`                 |
+|            上标            |            |                      `^text^`                      |
+|            下标            |            |                      `~text~`                      |
+|            高亮            |            |                     `==text==`                     |
+| 设置文本的字体，大小，颜色 |            | `<font face="黑体" color=Blue size=5 >文本<\font>` |
+|            空格            |            |                      `&emsp;`                      |
 
 ### example
 
 - [ ] **这是加粗**
+
 - [ ] *这是倾斜*
+
 - [ ] <u>这是下划线</u>
+
 - [ ] **<u>*这是加粗倾斜下划线*</u>**
+
 - [ ] cm^3^
+
 - [ ] H~2~O
+
 - [ ] ==这是高亮==
+
+  注：个别格式需要打开Typora的相关设置才能正常显示
 
 ## 罗列条目
 
@@ -98,41 +108,48 @@ def fun(x,y):
 | -------- | ------------ | ------------------------------------------------------------ |
 | 插入表格 | Ctrl+T       |                                                              |
 | 插入图片 | Ctrl+Shift+I | `![title](path)` 或`<img src="path" alt="title" style="zoom:80%;" />` |
-| 插入链接 | Ctrl+K       | `[title](url)`或`[title](# 位置)`                            |
+| 网页链接 | Ctrl+K       | `[title](url)`或`[title](# 位置)`                            |
+| 页内跳转 |              | 点击的位置`<a href="#label">title</a>`，跳转到的位置`<a id="label">title</a>` |
 
 ### example
 
 <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.3dmgame.com%2Fuploads%2Fimages%2Fnews%2F20210226%2F1614322923_858841.png&refer=http%3A%2F%2Fimg.3dmgame.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1657934789&t=7e80d506a9a82ee2f72cf886f647785a" alt="figure1：pokemon" style="zoom:80%;" />
 
-[右击打开链接--进入我的github主页](https://github.com/hfut-zyw)
+[点击或按住Ctrl键点击进入我的github主页](https://github.com/hfut-zyw)
 
-[右击打开链接--进入本文档的罗列条目处，在github中会失效](# 罗列条目)
 
---- 
---- 
+
+## 视频教程
+
+<iframe src="//player.bilibili.com/player.html?aid=504744800&bvid=BV1Fg411j7CW&cid=384406885&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="600" height="500"> </iframe>
+
+
+
+---
+---
 
 # 简单破解Typora的方法
 
-<img src="C:\Users\Amadeus\Desktop\Markdown\pojie.png" style="zoom:90%;" />
+![](pojie.png) 
 
 > 当你使用Typora beta等低版本的时候，是不是遇到上述问题，提示过期不能用，需要你升级最新付费版本。从网上一艘，教你修改系统时间到你之前能使用的日期，但是每次这样改来改去挺烦的，下面提供一种比较简便的方法实现一键启动Typora
 
 ## 第一步，新建txt文件，把如下代码拷贝进去
 
-if "%1"=="hide" goto CmdBegin
-start mshta vbscript:createobject("wscript.shell").run("""%~0"" hide",0)(window.close)&&exit
-:CmdBegin
+if "%1"=="hide" goto CmdBegin 
+start mshta vbscript:createobject("wscript.shell").run("""%~0"" hide",0)(window.close)&&exit 
+:CmdBegin 
 
-@echo off
-date 2021-6-25
-cd C:\Program Files\Typora
-start /b Typora.exe
-echo waiting for Typora
-::update time
-net time \\xxx_server
-net stop w32time
-net start w32time
-w32tm /resync
+@echo off 
+date 2021-6-25 
+cd C:\Program Files\Typora 
+start /b Typora.exe 
+echo waiting for Typora 
+::update time 
+net time \\xxx_server 
+net stop w32time 
+net start w32time 
+w32tm /resync 
 
 ## 第二步，修改上面的几个参数
 
@@ -159,7 +176,3 @@ start /b 后面的是你的程序
 6.右击，属性，桌面图标，找到Typora的安装目录，把图标变成Typora.exe即可
 
 大功告成！以后在桌面双击这个快捷方式即可运行Typora，在不关闭的情况下，就可以随便打开其他md文件了
-
-
-
-
