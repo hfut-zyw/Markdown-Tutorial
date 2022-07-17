@@ -153,19 +153,32 @@ def fun(x,y):
 ## 第一步，新建txt文件，把如下代码拷贝进去
 
 if "%1"=="hide" goto CmdBegin 
+
 start mshta vbscript:createobject("wscript.shell").run("""%~0"" hide",0)(window.close)&&exit 
+
 :CmdBegin 
 
+
 @echo off 
+
 date 2021-6-25 
+
 cd C:\Program Files\Typora 
+
 start /b Typora.exe 
+
 echo waiting for Typora 
+
 ::update time 
+
 net time \\xxx_server 
+
 net stop w32time 
+
 net start w32time 
+
 w32tm /resync 
+
 
 ## 第二步，修改上面的几个参数
 
