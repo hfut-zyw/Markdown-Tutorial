@@ -108,6 +108,58 @@ def fun(x,y):
 
 [右击打开链接--进入本文档的罗列条目处，在github中会失效](# 罗列条目)
 
+--- 
+--- 
+
+# 简单破解Typora的方法
+
+<img src="C:\Users\Amadeus\Desktop\Markdown\pojie.png" style="zoom:90%;" />
+
+> 当你使用Typora beta等低版本的时候，是不是遇到上述问题，提示过期不能用，需要你升级最新付费版本。从网上一艘，教你修改系统时间到你之前能使用的日期，但是每次这样改来改去挺烦的，下面提供一种比较简便的方法实现一键启动Typora
+
+## 第一步，新建txt文件，把如下代码拷贝进去
+
+if "%1"=="hide" goto CmdBegin
+start mshta vbscript:createobject("wscript.shell").run("""%~0"" hide",0)(window.close)&&exit
+:CmdBegin
+
+@echo off
+date 2021-6-25
+cd C:\Program Files\Typora
+start /b Typora.exe
+echo waiting for Typora
+::update time
+net time \\xxx_server
+net stop w32time
+net start w32time
+w32tm /resync
+
+## 第二步，修改上面的几个参数
+
+date 后面的日期为你能使用的时候的日期
+
+cd 后面是你Typora程序的路径
+
+start /b 后面的是你的程序
+
+把这三个改对后叉掉保存
+
+## 第三步，结尾工作
+
+1.把txt后缀名改为bat
+
+2.再把这个bat文件放到你的C:\Program Files\Typora目录下
+
+3.发送这个bat文件快捷方式到桌面
+
+4.删除原来的Typora桌面快捷方式，把这个bat快捷方式名称改为Typora
+
+5.右击这个改过名的Typora，属性，高级，勾选以管理员身份运行
+
+6.右击，属性，桌面图标，找到Typora的安装目录，把图标变成Typora.exe即可
+
+大功告成！以后在桌面双击这个快捷方式即可运行Typora，在不关闭的情况下，就可以随便打开其他md文件了
+
 
 
 
