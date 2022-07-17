@@ -1,6 +1,22 @@
-# Markdown Tutorial
+- [Markdown Tutorial](#markdown-tutorial)
+  * [常用命令](#----)
+  * [标题](#--)
+  * [文本格式](#----)
+    + [example](#example)
+  * [罗列条目](#----)
+    + [example](#example-1)
+  * [插入公式、代码](#-------)
+    + [example](#example-2)
+  * [插入表格、图片、链接](#----------)
+    + [example](#example-3)
+  * [视频教程](#----)
+- [简单破解Typora的方法](#----typora---)
+  * [第一步，新建txt文件，把如下代码拷贝进去](#------txt------------)
+  * [第二步，修改上面的几个参数](#-------------)
+  * [第三步，结尾工作](#--------)
 
-[TOC]
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## 常用命令
 
