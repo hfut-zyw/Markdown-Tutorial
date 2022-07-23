@@ -43,9 +43,9 @@
 |            上标            |            |                      `^text^`                      |
 |            下标            |            |                      `~text~`                      |
 |            高亮            |            |                     `==text==`                     |
-| 设置文本的字体，大小，颜色 |            | `<font face="黑体" color=Blue size=5 >文本<\font>` |
 |            空格            |            |                      `&emsp;`                      |
-
+|            换行            |            |                      `<br>`或两个空格回车           |
+| 设置文本的字体，大小，颜色   |            | `<font face="黑体" color=Blue size=5 >文本<\font>` |
 ### example
 
 - [ ] **这是加粗**
